@@ -1,0 +1,43 @@
+body {
+    max-width: 1400px;
+}
+
+.header {
+    font-size: 48px;
+    text-align: center;
+    color: red;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 36px;
+    max-width: 1400px;
+}
+
+.selectbox {
+    min-width: 200px;
+}
+
+.location-text {
+    font-size: 20px;
+}
+.pt20 {
+    padding-top: 20px;
+}
+
+.map img {
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
+
+.selected-route {
+    font-size: 24px;
+    font-weight: bold;
+}

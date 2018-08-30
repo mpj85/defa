@@ -1,0 +1,43 @@
+<div ng-controller="mainController">
+    <div class="col-xs-6">
+        <div class="col-xs-6">
+            <div class="location-text">From location</div>
+            <select class="selectbox" ng-model="selectedFrom" ng-change="setSelectedFrom()" ng-options="place for place in listplaces"></select>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="location-text">To location</div>
+            <select class="selectbox" ng-model="selectedTo" ng-change="setSelectedTo()" ng-options="place for place in listplaces"></select>
+        </div>
+
+        <div class="col-xs-12 error pt20" ng-show="showError">Error: Cant calculate route when from location and to location is equal</div>
+
+        <div class="col-xs-12">
+            <div ng-show="selectedFromText != null && selectedToText != null">
+                <h1>Selected route</h1>
+                <div class="well ">
+                    <div class="selected-route">{{ selectedFromText }} -> {{ selectedToText }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12" ng-show="calculatedRoad != null">
+            <h1>Calculated route is</h1>
+            <div class="well">
+                <ul>
+                    <li ng-repeat="location in calculatedRoad">{{ location }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-xs-12" ng-show="calculatedRoad != null">
+            <div class="btn btn-primary pull-right" ng-click="resetData()">reset</div>
+        </div>
+
+    </div>
+
+    <div class="col-xs-6 map">
+        <img src="../img/map.png" />
+    </div>
+
+</div>
